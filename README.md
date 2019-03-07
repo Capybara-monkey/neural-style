@@ -4,4 +4,4 @@
 
 ユーザーが選択した画像を，絵画の画風と同じように変換するアプリケーション
 
-![ホーム画面](https://github.com/natsu-summer72/neural-style/tree/master/example/home.png)
+![ホーム画面](https://github.com/natsu-summer72/neural-style/blob/master/example/home.png)
