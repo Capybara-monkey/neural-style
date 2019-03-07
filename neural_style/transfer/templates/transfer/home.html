@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}画風変換アプリケーション{% endblock title %}
+
+
+{% block content %}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="{% url 'home' %}">画風変換</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'home' %}">ホーム<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'about' %}">画風変換とは？</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="jumbotron", style="background: white;">
+  <div class="container">
+    <h1>画風変換アプリケーション</h1>
+    <p>好きな画像を，絵のように変換できます</p>
+  </div>
+</div>
+
+<div class="container">
+  <form action="{% url 'home' %}" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="変換">
+  </form>
+</div>
+<br><br>
+
+<div class="container">
+  <center>
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+  </ol>
+    <div class="carousel-inner" role="listbox">
+      {% for url in style_url %}
+        {% if url == 'style_with_title/composition.png' %}
+          <div class="carousel-item active">
+        {% else %}
+          <div class="carousel-item">
+        {% endif %}
+        <img src="{% static url %}" height="400">
+          </div>
+    {% endfor %}
+    </div>
+    <a class="carousel-control-prev" href="#carouselFadeExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselFadeExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  </div>
+  </center>
+</div>
+
+{% endblock content %}

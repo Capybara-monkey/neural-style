@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}画風変換アプリケーション{% endblock title %}
+
+
+{% block content %}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="{% url 'home' %}">画風変換</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'home' %}">ホーム</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'about' %}">画風変換とは？</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="jumbotron", style="background: white;">
+  <div class="container">
+    <h1>画風変換アプリケーション</h1><br>
+    <h5>変換結果</h5>
+  </div>
+</div>
+<div class="container">
+  <table>
+      <td>
+      <img src = "{{ content_path }}" height="300">
+      </td>
+      <td>
+          <img src="/media/right.jpg", height="300">
+      </td>
+      <td>
+      <img src = "/media/result/result.jpg" height="300">
+      </td>
+  </table>
+</div>
+{% endblock content %}
