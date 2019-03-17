@@ -1,13 +1,16 @@
 from django.shortcuts import render, redirect
-from .forms import PhotoForm
-from .models import Photo
+from keras import backend as K
 from django.http import HttpResponse
 import glob
 import os
 import shutil
 
-from .ns_model.generate import main
+from .forms import PhotoForm
+from .models import Photo
+#from .ns_model.generate import main
+from .ns_model.transform_net import TransformNet
 
+Net= TransformNet()
 
 def home(request):
     #スタイル画像のファイル名とurlの取得
@@ -26,6 +29,7 @@ def home(request):
         os.mkdir("./media/content")
         os.mkdir("./media/result")
         return render(request, 'transfer/home.html', params)
+
     elif request.method=="POST":
         form = PhotoForm(request.POST, request.FILES)
         if not form.is_valid():
@@ -40,10 +44,10 @@ def home(request):
         extension = glob.glob("./media/content/*")[0].split(".")[-1]
         content_path = "media/content/content." + extension
         result_path = "media/result/result.jpg"
-        model_path = "transfer/ns_model/models/" + form["style"].data + ".model"
+        style = form.data["style"]
 
-        main(content_path, model_path, result_path)
-
+        K.clear_session()
+        Net.predict(style=style, output_file=result_path, input_file=content_path)
         return redirect("/transfer/result/")
 
 
