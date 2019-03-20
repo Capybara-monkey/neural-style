@@ -6,7 +6,7 @@
 
 
 #### ホーム画面 
-![ホーム画面](https://github.com/natsu-summer72/neural-style/blob/master/example/home.png)
+![ホーム画面](https://github.com/natsu-summer72/neural-style/blob/master/example/home1.png)
 
 
 #### style画像(似せたい画風)と，content画像(元画像)を選択
