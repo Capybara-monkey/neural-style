@@ -5,21 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="43e04896-f23c-40b8-a7d2-a2138a9343a9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/neural_style/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/neural_style/transfer/ns_model/transform_net.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/neural_style/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/neural_style/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/neural_style/media/content/content.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/neural_style/media/result/result.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/neural_style/transfer/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/neural_style/transfer/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/neural_style/transfer/ns_model/comp.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/neural_style/transfer/ns_model/create_chainer_model.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/neural_style/transfer/ns_model/generate.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/neural_style/transfer/ns_model/models/composition.model" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/neural_style/transfer/ns_model/models/seurat.model" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/neural_style/transfer/ns_model/net.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/neural_style/transfer/ns_model/train.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/neural_style/transfer/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/neural_style/transfer/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/neural_style/transfer/static/style/composition.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/neural_style/transfer/static/style/seurat.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/neural_style/transfer/static/style_with_title/composition.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/neural_style/transfer/static/style_with_title/seurat.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/neural_style/transfer/templates/transfer/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/neural_style/transfer/templates/transfer/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/neural_style/transfer/templates/transfer/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/neural_style/transfer/templates/transfer/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/neural_style/transfer/templates/transfer/show_result.html" beforeDir="false" afterPath="$PROJECT_DIR$/neural_style/transfer/templates/transfer/show_result.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,7 +27,7 @@
         <entry file="file://$PROJECT_DIR$/neural_style/transfer/forms.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="51">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
         </entry>
@@ -47,11 +41,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/neural_style/transfer/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="45" column="14" lean-forward="true" selection-start-line="45" selection-start-column="14" selection-end-line="45" selection-end-column="14" />
+            <state relative-caret-position="381">
+              <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
               </folding>
@@ -63,7 +57,7 @@
         <entry file="file://$PROJECT_DIR$/neural_style/transfer/ns_model/transform_net.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
-              <caret line="5" column="58" lean-forward="true" selection-start-line="5" selection-start-column="58" selection-end-line="5" selection-end-column="58" />
+              <caret line="5" column="58" selection-start-line="5" selection-start-column="58" selection-end-line="5" selection-end-column="58" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
               </folding>
@@ -92,8 +86,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/neural_style/transfer/templates/transfer/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="721">
-              <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+            <state relative-caret-position="347">
+              <caret line="61" selection-start-line="61" selection-end-line="65" selection-end-column="6" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -101,13 +95,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/neural_style/transfer/templates/transfer/show_result.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="721">
-              <caret line="44" column="22" selection-start-line="44" selection-start-column="22" selection-end-line="44" selection-end-column="22" />
+            <state relative-caret-position="636">
+              <caret line="46" column="10" lean-forward="true" selection-start-line="46" selection-start-column="10" selection-end-line="46" selection-end-column="10" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -125,8 +120,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/neural_style/transfer/templates/transfer/about.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" selection-start-line="6" selection-end-line="7" />
+            <state relative-caret-position="492">
+              <caret line="32" column="24" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -158,9 +153,6 @@
         <option value="$PROJECT_DIR$/neural_style/transfer/ns_model/transform.py" />
         <option value="$PROJECT_DIR$/neural_style/transfer/ns_model/generate.py" />
         <option value="$PROJECT_DIR$/neural_style/transfer/urls.py" />
-        <option value="$PROJECT_DIR$/neural_style/transfer/templates/transfer/home.html" />
-        <option value="$PROJECT_DIR$/neural_style/transfer/templates/transfer/show_result.html" />
-        <option value="$PROJECT_DIR$/neural_style/transfer/templates/transfer/about.html" />
         <option value="$PROJECT_DIR$/neural_style/transfer/transfernet.py" />
         <option value="$PROJECT_DIR$/neural_style/transfer/ns_model/utils.py" />
         <option value="$PROJECT_DIR$/neural_style/transfer/ns_model/layers.py" />
@@ -168,6 +160,9 @@
         <option value="$PROJECT_DIR$/neural_style/transfer/ns_model/transform_net.py" />
         <option value="$PROJECT_DIR$/neural_style/transfer/forms.py" />
         <option value="$PROJECT_DIR$/neural_style/transfer/views.py" />
+        <option value="$PROJECT_DIR$/neural_style/transfer/templates/transfer/about.html" />
+        <option value="$PROJECT_DIR$/neural_style/transfer/templates/transfer/home.html" />
+        <option value="$PROJECT_DIR$/neural_style/transfer/templates/transfer/show_result.html" />
       </list>
     </option>
   </component>
@@ -259,9 +254,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1455" height="935" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17700987" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.021156559" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -346,56 +340,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/neural_style/transfer/templates/transfer/about.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" selection-start-line="6" selection-end-line="7" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/neural_style/transfer/templates/transfer/show_result.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="721">
-          <caret line="44" column="22" selection-start-line="44" selection-start-column="22" selection-end-line="44" selection-end-column="22" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/neural_style/transfer/ns_model/utils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/neural_style/transfer/ns_model/layers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/neural_style/transfer/ns_model/nets.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/neural_style/transfer/templates/transfer/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="721">
-          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -414,29 +364,74 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/neural_style/transfer/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/neural_style/transfer/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/neural_style/transfer/ns_model/transform_net.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="5" column="58" lean-forward="true" selection-start-line="5" selection-start-column="58" selection-end-line="5" selection-end-column="58" />
+          <caret line="5" column="58" selection-start-line="5" selection-start-column="58" selection-end-line="5" selection-end-column="58" />
           <folding>
             <element signature="e#0#33#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/neural_style/transfer/forms.py">
+    <entry file="file://$PROJECT_DIR$/neural_style/transfer/ns_model/layers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="119">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/neural_style/transfer/views.py">
+    <entry file="file://$PROJECT_DIR$/neural_style/transfer/ns_model/nets.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="45" column="14" lean-forward="true" selection-start-line="45" selection-start-column="14" selection-end-line="45" selection-end-column="14" />
+        <state relative-caret-position="118">
+          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/neural_style/transfer/templates/transfer/about.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="492">
+          <caret line="32" column="24" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
           <folding>
-            <element signature="e#0#45#0" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/neural_style/transfer/templates/transfer/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="61" selection-start-line="61" selection-end-line="65" selection-end-column="6" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/neural_style/transfer/templates/transfer/show_result.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="636">
+          <caret line="46" column="10" lean-forward="true" selection-start-line="46" selection-start-column="10" selection-end-line="46" selection-end-column="10" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

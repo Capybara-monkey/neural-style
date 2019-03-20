@@ -5,7 +5,7 @@
 {% block title %}画風変換とは？{% endblock %}
 
 {% block content %}
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
   <a class="navbar-brand" href="{% url 'home' %}">画風変換</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -13,12 +13,11 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-
       <li class="nav-item">
-        <a class="nav-link" href="{% url 'home' %}">ホーム</a>
+        <a class="nav-link" href="{% url 'home' %}">ホーム<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="{% url 'about' %}">画風変換とは?<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="{% url 'about' %}">画風変換とは？</a>
       </li>
     </ul>
   </div>
@@ -27,12 +26,16 @@
 <div class="jumbotron", style="background: white;">
     <div class="container">
         <h1>画風変換とは？</h1>
+        <p>画風変換とは，コンテンツ画像とスタイル画像を用意し，コンテンツ画像をスタイル画像と同じような特徴をもつように変換する技術である。<br>詳細は<a href="https://arxiv.org/abs/1603.08155">元論文</a>を参照。</p>
 
-        <h3>作成中・・・</h3>
+
+        <div class="container">
+            <h3>適用例</h3>
+        </div>
     </div>
-</div>
 
 
+    </div>
 </div>
 
 {% endblock content %}

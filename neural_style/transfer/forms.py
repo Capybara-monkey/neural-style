@@ -12,4 +12,4 @@ class PhotoForm(forms.Form):
         required=True
     )
 
-    image = forms.ImageField()
+    image = forms.ImageField(label="画像")

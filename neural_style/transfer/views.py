@@ -1,9 +1,11 @@
 from django.shortcuts import render, redirect
 from keras import backend as K
 from django.http import HttpResponse
+from django.views.generic import TemplateView
 import glob
 import os
 import shutil
+from PIL import Image
 
 from .forms import PhotoForm
 from .models import Photo
@@ -36,7 +38,7 @@ def home(request):
             raise ValueError('invalid form')
 
 
-        # content画像を media/contentに保存
+        # content画像を media/content に保存
         photo = Photo()
         photo.image = form.cleaned_data["image"]
         photo.save()
@@ -46,18 +48,31 @@ def home(request):
         result_path = "media/result/result.jpg"
         style = form.data["style"]
 
+        # 画像サイズが大きすぎる場合には縮小
+        img = Image.open(content_path)
+        width, height = img.size
+        if width > 1000:
+            resize_width=1000
+            resize_height = height * (resize_width/width)
+            img = img.resize((int(resize_width), int(resize_height)))
+            img.save(content_path)
+
+
         K.clear_session()
         Net.predict(style=style, output_file=result_path, input_file=content_path)
         return redirect("/transfer/result/")
 
 
-def show_result(request):
-    params = {
-        "content_path": "/media/content/" + glob.glob("./media/content/*")[0].split("\\")[-1] ,
-    }
-    return render(request, "transfer/show_result.html", params)
 
-def about(request):
-    params = {}
+class AboutView(TemplateView):
+    template_name = "transfer/about.html"
 
-    return render(request, "transfer/about.html", params)
+
+class ResultView(TemplateView):
+    template_name = "transfer/show_result.html"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["content_path"] = "/media/content/" + glob.glob("./media/content/*")[0].split("\\")[-1]
+
+        return context

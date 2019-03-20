@@ -3,6 +3,6 @@ from transfer import views
 
 urlpatterns = [
     path('', views.home, name='home'),
-    path('result/', views.show_result, name="result"),
-    path('about/', views.about, name='about'),
+    path('result/', views.ResultView.as_view(), name="result"),
+    path('about/', views.AboutView.as_view(), name='about'),
 ]
