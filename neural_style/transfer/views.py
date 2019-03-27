@@ -9,10 +9,7 @@ from PIL import Image
 
 from .forms import PhotoForm
 from .models import Photo
-#from .ns_model.generate import main
-from .ns_model.transform_net import TransformNet
-
-Net= TransformNet()
+from .tasks import predict
 
 def home(request):
     #スタイル画像のファイル名とurlの取得
@@ -59,7 +56,7 @@ def home(request):
 
 
         K.clear_session()
-        Net.predict(style=style, output_file=result_path, input_file=content_path)
+        predict.delay(style, result_path, content_path)
         return redirect("/transfer/result/")
 
 

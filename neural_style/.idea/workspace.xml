@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e52bdcb8-0f10-4b28-a7da-3a84a61be00c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/transfer/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/transfer/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/transfer/static/style/composition.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/transfer/static/style/seurat.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/transfer/static/style_with_title/composition.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/transfer/static/style_with_title/seurat.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/transfer/templates/transfer/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/transfer/templates/transfer/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/transfer/templates/transfer/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/transfer/templates/transfer/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/transfer/templates/transfer/show_result.html" beforeDir="false" afterPath="$PROJECT_DIR$/transfer/templates/transfer/show_result.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/transfer/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/transfer/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/transfer/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/transfer/views.py" afterDir="false" />
-    </list>
+    <list default="true" id="e52bdcb8-0f10-4b28-a7da-3a84a61be00c" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
