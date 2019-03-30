@@ -27,6 +27,7 @@
     <div class="container">
         <div class="jumbotron" style="background:white">
             <h1>画風変換アプリケーション</h1>
+            {% if done %}
             <h5>画像の変換が終了しました。</h5><br>
         <div>
     </div>
@@ -48,6 +49,19 @@
           </table>
         </center>
     </div>
+            {% else %}
+            <center>
+                <br<br><br>
+                <div class="spinner-border text-primary" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+                <br><br><br><br><br>
+                <h5>画面が切り替わらない場合は<a href="{% url 'result' %}">こちら</a></h5>
+            </center>
+        </div>
+    </div>
+    {% endif %}
+
   <hr>
   <fotter>
     <p>Style Transfer</p>

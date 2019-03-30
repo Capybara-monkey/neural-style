@@ -1,6 +1,4 @@
 from django.shortcuts import render, redirect
-from keras import backend as K
-from django.http import HttpResponse
 from django.views.generic import TemplateView
 import glob
 import os
@@ -10,6 +8,24 @@ from PIL import Image
 from .forms import PhotoForm
 from .models import Photo
 from .tasks import predict
+
+class AboutView(TemplateView):
+    template_name = "transfer/about.html"
+
+
+class ResultView(TemplateView):
+    template_name = "transfer/show_result.html"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["content_path"] = "/media/content/" + glob.glob("./media/content/*")[0].split("\\")[-1]
+        # media/resultが空かどうかを確認
+        if os.listdir('./media/result'):
+            context["done"] = True
+        else:
+            context["done"] = False
+        return context
+
 
 def home(request):
     #スタイル画像のファイル名とurlの取得
@@ -34,7 +50,6 @@ def home(request):
         if not form.is_valid():
             raise ValueError('invalid form')
 
-
         # content画像を media/content に保存
         photo = Photo()
         photo.image = form.cleaned_data["image"]
@@ -54,22 +69,5 @@ def home(request):
             img = img.resize((int(resize_width), int(resize_height)))
             img.save(content_path)
 
-
-        K.clear_session()
-        predict.delay(style, result_path, content_path)
+        predict.delay(style=style, result_path=result_path, content_path=content_path)
         return redirect("/transfer/result/")
-
-
-
-class AboutView(TemplateView):
-    template_name = "transfer/about.html"
-
-
-class ResultView(TemplateView):
-    template_name = "transfer/show_result.html"
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context["content_path"] = "/media/content/" + glob.glob("./media/content/*")[0].split("\\")[-1]
-
-        return context
