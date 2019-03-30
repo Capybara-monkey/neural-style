@@ -9,8 +9,10 @@
 
 ![ホーム画面](https://github.com/natsu-summer72/neural-style/blob/master/example/home.png)
 
-#### style画像(似せたい画風)と，content画像(元画像)を選択
-![選択](https://github.com/natsu-summer72/neural-style/blob/master/example/choose_style.png)
+
+#### 画風変換処理の実行中画面
+機械学習の重い処理は非同期で実行
+![非同期](https://github.com/natsu-summer72/neural-style/blob/master/example/.png)
 
 #### 結果の出力画面
 ![結果](https://github.com/natsu-summer72/neural-style/blob/master/example/result.png)
