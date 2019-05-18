@@ -9,6 +9,7 @@ from .forms import PhotoForm
 from .models import Photo
 from .tasks import predict
 
+
 class AboutView(TemplateView):
     template_name = "transfer/about.html"
 
