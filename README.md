@@ -22,7 +22,7 @@ Python 3.6.4
 ![非同期](https://github.com/natsu-summer72/neural-style/blob/master/example/async.png)
 
 #### Django + Celery による非同期処理
-  * 画風変換の処理には，40秒程度かかってしまい，その間 HTTP 通信を継続するのは無駄。
+  * 画風変換の処理には，時間がかかってしまい，その間 HTTP 通信を継続するのは無駄。
   * 機械学習による重い処理は，Workerが実行し，サーバーはHTTPレスポンスを返す。
 ![celery](https://github.com/natsu-summer72/neural-style/blob/master/example/celery.png)
 
