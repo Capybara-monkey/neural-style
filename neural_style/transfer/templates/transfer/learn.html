@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}画風変換アプリケーション{% endblock title %}
+
+
+{% block content %}
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="{% url 'home' %}">画風変換</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li>
+                <a class="nav-link" href="{% url 'home' %}">ホーム<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'about' %}">画風変換とは？</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'learn' %}">新しいスタイルを追加</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container" style="padding:100px 0 0 0">
+    <h1>新しいスタイルを学習</h1>
+        <div class="jumbotron bg-light">
+            <h4>変換する画像とスタイルを選択</h4>
+            <div class="container">
+                <form action="{% url 'learn' %}" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <input class="btn btn-primary" type="submit" value="変換">
+                </form>
+            </div>
+        </div>
+</div>
+
+{% endblock content %}

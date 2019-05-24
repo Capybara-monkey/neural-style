@@ -5,10 +5,22 @@ import os
 import shutil
 from PIL import Image
 
-from .forms import PhotoForm
-from .models import Photo
-from .tasks import predict
+from .forms import PhotoForm, StyleForm
+from .models import Photo, Style
+from .tasks import learn_style
 
+from .ns_model.model import NS_MODEL
+from tensorflow.python.keras import backend as K
+from tensorflow.python.keras.preprocessing.image import load_img, img_to_array, array_to_img
+import numpy as np
+import tensorflow as tf
+
+
+graph = tf.Graph()
+with graph.as_default():
+    session = tf.Session()
+    with session.as_default():
+        model = NS_MODEL()
 
 class AboutView(TemplateView):
     template_name = "transfer/about.html"
@@ -70,5 +82,42 @@ def home(request):
             img = img.resize((int(resize_width), int(resize_height)))
             img.save(content_path)
 
-        predict.delay(style=style, result_path=result_path, content_path=content_path)
+        weihts_name = "transfer/ns_model/pretrained_model/"+ style + ".h5"
+        global graph, session
+        K.set_session(session)
+        with graph.as_default():
+            model.model.load_weights(weihts_name)
+
+        K.set_session(session)
+        with graph.as_default():
+            img = img_to_array(load_img(content_path, target_size=(224, 224)))
+            trans_img = model.model_gen.predict(np.expand_dims(img, axis=0))
+        array_to_img(trans_img[0]).save(result_path)
         return redirect("/transfer/result/")
+
+def learn(request):
+    if request.method == "GET":
+        form = StyleForm()
+        params = {"form": form}
+        return render(request, 'transfer/learn.html', params)
+
+    if request.method == "POST":
+        form = StyleForm(request.POST, request.FILES)
+        if not form.is_valid():
+            raise ValueError("invalid form")
+
+        style = form.data["name"]
+
+        # content画像を media/content に保存
+        img = Style()
+        img.image = form.cleaned_data["image"]
+        img.save()
+
+        learn_style.delay(style=style)
+        return redirect("/transfer/")
+
+
+
+
+
+
