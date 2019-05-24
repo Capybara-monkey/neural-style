@@ -38,6 +38,9 @@ Python 3.6.4
 例: example という名前のスタイル画像を追加
 ![スタイルの追加](https://github.com/natsu-summer72/neural-style/blob/master/example/learn_home.png)
 
+新しいスタイルの学習は，Celery Worker が実行
+![学習](https://github.com/natsu-summer72/neural-style/blob/master/example/learning.png)
+
 追加したスタイルに変換することが可能になる
 ![スタイルの追加後](https://github.com/natsu-summer72/neural-style/blob/master/example/finish_learning.png)
 
