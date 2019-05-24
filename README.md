@@ -9,8 +9,8 @@ Python 3.6.4
 ## 画風変換アプリケーション
 ユーザーが選択した画像を，絵画の画風と同じように変換するアプリケーション
 
-### 画像の変換
-#### ホーム画面 
+___
+### 画像の変換#### ホーム画面 
 
 ![ホーム画面](https://github.com/natsu-summer72/neural-style/blob/master/example/home.png)
 
@@ -31,12 +31,16 @@ Python 3.6.4
 #### 結果の出力画面
 ![結果](https://github.com/natsu-summer72/neural-style/blob/master/example/result.png)
 
+
 ### 新しいスタイルの学習
 新しいスタイルを学習することもできる。
 学習の処理は，Celery Workerが実行
 
 例: example という名前のスタイル画像を追加
 ![スタイルの追加](https://github.com/natsu-summer72/neural-style/blob/master/example/learn_home.png)
+
+新しいスタイルの学習は，Celery Worker が実行
+![学習](https://github.com/natsu-summer72/neural-style/blob/master/example/learning.png)
 
 追加したスタイルに変換することが可能になる
 ![スタイルの追加後](https://github.com/natsu-summer72/neural-style/blob/master/example/finish_learning.png)
