@@ -22,19 +22,18 @@ ___
 
 ![非同期](https://github.com/natsu-summer72/neural-style/blob/master/example/async.png)
 
-#### Django + Celery による非同期処理
-  * 画風変換の処理には，時間がかかってしまい，その間 HTTP 通信を継続するのは無駄。
-  * 機械学習による重い処理は，Workerが実行し，サーバーはHTTPレスポンスを返す。
-![celery](https://github.com/natsu-summer72/neural-style/blob/master/example/celery.png)
-
-
 #### 結果の出力画面
 ![結果](https://github.com/natsu-summer72/neural-style/blob/master/example/result.png)
 
-
+___
 ### 新しいスタイルの学習
 新しいスタイルを学習することもできる。
 学習の処理は，Celery Workerが実行
+
+#### Django + Celery による非同期処理
+  * 新しいスタイルの学習には，時間がかかってしまいその間 HTTP 通信を継続するのは無駄。
+  * 機械学習による重い処理は，Workerが実行し，サーバーはHTTPレスポンスを返す。
+![celery](https://github.com/natsu-summer72/neural-style/blob/master/example/celery.png)
 
 例: example という名前のスタイル画像を追加
 ![スタイルの追加](https://github.com/natsu-summer72/neural-style/blob/master/example/learn_home.png)
