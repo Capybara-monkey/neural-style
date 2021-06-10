@@ -1,4 +1,4 @@
-Django == 2.1.7
+Django == 2.2.24
 celery == 4.2.2
 Keras == 2.0.0
 tensorflow == 1.13.1
